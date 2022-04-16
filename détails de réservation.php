@@ -20,30 +20,30 @@ $eid=$_SESSION['create_account_logged_in'];
 </head>
 
 <body style="margin-top:50px;">
-    <?php
-  include('barre de menu.html');
+<?php
+      include('barre de menu.php')
   ?>
-        <div class="container-fluid">
-            <!--Primary Id-->
-            <h1 class="text-center text-primary">[ Les détails de réservation ]</h1><br>
-            <div class="container">
-                <div class="row">
-                    <table class="table table-striped table-bordered table-hover table-responsive" style="height:150px;">
-                        <tr>
-                            <th>Nom</th>
-                            <th>Email</th>
-                            <th>Numéro de téléphone</th>
-                            <th>Addresse</th>
-                            <th>Pays</th>
-                            <th>Type de la chambre</th>
-                            <th>Vérifier la date d'entrée</th>
-                            <th>Vérifier le temps d'entrée</th>
-                            <th>Vérifier la date de sortie</th>
-                            <th>Occupation</th>
-                            <th>Annuler</th>
-                        </tr>
+    <div class="container-fluid">
+        <!--Primary Id-->
+        <h1 class="text-center text-primary">[ Les détails de réservation ]</h1><br>
+        <div class="container">
+            <div class="row">
+                <table class="table table-striped table-bordered table-hover table-responsive" style="height:150px;">
+                    <tr>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Numéro de téléphone</th>
+                        <th>Addresse</th>
+                        <th>Pays</th>
+                        <th>Type de la chambre</th>
+                        <th>Vérifier la date d'entrée</th>
+                        <th>Vérifier le temps d'entrée</th>
+                        <th>Vérifier la date de sortie</th>
+                        <th>Occupation</th>
+                        <th>Annuler</th>
+                    </tr>
 
-                        <?php 
+                    <?php 
 $sql= mysqli_query($con,"select * from room_booking_details where email='$eid' "); 
 while($result=mysqli_fetch_assoc($sql))
 {
@@ -63,13 +63,13 @@ echo "<td><a href='annuler la réservation.php?order_id=$oid' style='color:Red'>
 echo "</tr>";
 }                         
                ?>
-                    </table>
+                </table>
 
-                </div>
             </div>
         </div>
-        <?php
-include('bas de page.html')
+    </div>
+    <?php
+  include('bas de page.php')
 ?>
 </body>
 

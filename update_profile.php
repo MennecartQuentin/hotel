@@ -1,23 +1,18 @@
 <?php
+session_start();
 include('connection.php');
-extract($_REQUEST);
-if(isset($save))
-{
-  $sql= mysqli_query($con,"select * from create_account where email='$email' ");
-  if(mysqli_num_rows($sql))
-  {
-  $msg= "<h1 style='color:red'> Le compte existe déjà</h1>";    
-  }
-  else
-  {
+error_reporting(1);
+$eid=$_SESSION['create_account_logged_in'];
+?>
+    <?php 
+$i=1;
+$sql=mysqli_query($con,"select * from create_account where email='$eid'");
+$result=mysqli_fetch_assoc($sql);
 
-      $sql="insert into create_account(name,email,password,mobile,address,gender,country,pictrure) values('$fname','$email','$Passw','$mobi','$addr','$gend','$countr','$pict')";
-   if(mysqli_query($con,$sql))
-   {
-   $msg= "<h1 style='color:green'>Informations enregistrées avec succès</h1>"; 
-   header('location:identifier.html'); 
-   }
-  }
+extract($_REQUEST);
+if(isset($update))
+{
+mysqli_query($con,"update create_account set name='$fname',email='$email',password='$Passw',mobile='$mobi',address='$addr',gender='$gend',country='$countr'where email='$eid'");
 }
 ?>
     <!DOCTYPE html>
@@ -36,28 +31,24 @@ if(isset($save))
     </head>
 
     <body style="margin-top:50px;">
-        <?php 
-include('barre de menu.html');
+    <?php
+      include('barre de menu.php')
   ?>
-        <div class="container-fluid" style="background-color:lightgrey;color:#000;">
+        <div class="container-fluid" style="color:#000;">
+            <!-- Primary Id-->
             <div class="container">
+                <h1 style="background-color:#ed2553; border-radius:50px;display:inline-block;"><b><font color="#080808">Modifier Mon Compte</font></b></h1>
                 <div class="row">
-                    <center>
-                        <h1 style="background-color:lightblue; border-radius:50px;display:inline-block;"><b><font color="#080808">Créer un nouveau compte</font></b></h1>
-                    </center>
-                    <center>
-                        <?php echo @$msg;?>
-                    </center><br>
                     <div class="col-sm-2"></div>
                     <div class="col-sm-6 ">
-                        <form class="form-horizontal" method="post">
+                        <form class="form-horizontal" method="post" enctype="multipart/form-data">
                             <div class="form-group">
 
                                 <div class="control-label col-sm-5">
                                     <h4>Nom :</h4>
                                 </div>
                                 <div class="col-sm-7">
-                                    <input type="text" name="fname" class="form-control" placeholder="Entrer votre nom" required>
+                                    <input type="text" name="fname" value="<?php echo $result['name']; ?>" class="form-control" placeholder="Entrer votre nom">
                                 </div>
                             </div>
 
@@ -66,7 +57,8 @@ include('barre de menu.html');
                                     <h4>Email :</h4>
                                 </div>
                                 <div class="col-sm-7">
-                                    <input type="text" name="email" class="form-control" placeholder="Entrer votre Email" autocomplete="off" required>
+                                    <input type="text" name="email" class="form-control" placeholder="Entrer votre Email">
+                                    <h4 style="color:red">L'email actuel doit être requis *</h4>
                                 </div>
                             </div>
 
@@ -75,36 +67,36 @@ include('barre de menu.html');
                                     <h4>Mot de passe :</h4>
                                 </div>
                                 <div class="col-sm-7">
-                                    <input type="password" name="Passw" class="form-control" placeholder="Entrer votre mot de passe" autocomplete="off" required>
+                                    <input type="password" name="Passw" value="<?php echo $result['password']; ?>" class="form-control" placeholder="Entrer votre mot de passe">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="control-label col-sm-5">
-                                    <h4>Numéro de téléphone:</h4>
+                                    <h4>Numéro de téléphone :</h4>
                                 </div>
                                 <div class="col-sm-7">
-                                    <input type="text" name="mobi" class="form-control" placeholder="Entrer votre numéro de téléphone" required>
+                                    <input type="text" name="mobi" value="<?php echo $result['mobile']; ?>" class="form-control" placeholder="Entrer votre numéro de téléphone">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="control-label col-sm-5">
-                                    <h4>Addresse :</h4>
+                                    <h4>Adresse :</h4>
                                 </div>
                                 <div class="col-sm-7">
-                                    <textarea name="addr" class="form-control" placeholder="Entrer votre addresse" required></textarea>
+                                    <textarea name="addr" class="form-control" placeholder="Entrer votre addresse"><?php echo $result['address']; ?></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="control-label col-sm-5">
-                                    <h4 id="top">genre :</h4>
+                                    <h4 id="top">Genre :</h4>
                                 </div>
                                 <div class="col-sm-7">
-                                    <input type="radio" name="gend" value="male" required><b>Homme</b>&emsp;
-                                    <input type="radio" name="gend" value="male" required><b>Femme</b>&emsp;
-                                    <input type="radio" name="gend" value="male" required><b>Autre</b>
+                                    <input type="radio" name="gend" value="male"><b>Homme</b>&emsp;
+                                    <input type="radio" name="gend" value="male"><b>Femme</b>&emsp;
+                                    <input type="radio" name="gend" value="male"><b>Autre</b>
                                 </div>
                             </div>
 
@@ -113,7 +105,7 @@ include('barre de menu.html');
                                     <h4>Pays :</h4>
                                 </div>
                                 <div class="col-sm-7">
-                                    <select name="countr" class="form-control" required>
+                                    <select name="countr" value="<?php echo $result['country']; ?>" class="form-control">
               <option>France</option>
               <option>Belgique</option>
               <option>Suisse</option>
@@ -126,11 +118,11 @@ include('barre de menu.html');
                                     <h4 id="top">Photo de profil :</h4>
                                 </div>
                                 <div class="col-sm-7">
-                                    <input type="file" name="pict" accept="image/*" required>
+                                    <input type="file" name="pict" accept="image/*">
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6" style="text-align:right;"><br>
-                                        <input type="submit" value="Submit" name="save" class="btn btn-success btn-group-justified" required style="color:#000;font-family: 'Baloo Bhai', cursive;height:40px;" />
+                                        <input type="submit" value="Modifier Profil" name="update" class="btn btn-success btn-group-justified" required style="color:#000;font-family: 'Baloo Bhai', cursive;height:40px;" />
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +135,7 @@ include('barre de menu.html');
         </div>
         </div>
         <?php
-    include('bas de page.html')
+  include('bas de page.php')
 ?>
     </body>
 

@@ -4,6 +4,6 @@ $oid=$_GET['order_id'];
 $q=mysqli_query($con,"delete from  room_booking_details where id='$oid' ");
 if($q)
 {
-header('location:détails de réservation.html');
+header('location:détails de réservation.php');
 }
 ?> 

@@ -18,9 +18,9 @@ error_reporting(1);
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="index.html" title="Home">Accueil</a></li>
-                <li><a href="à propos.html" title="About">à propos </a></li>
-                <li><a href="galerie des images.html" title="Gallery">Galerie </a></li>
+                <li><a href="index.php" title="Home">Accueil</a></li>
+                <li><a href="à propos.php" title="About">à propos </a></li>
+                <li><a href="galerie des images.php" title="Gallery">Galerie </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
@@ -32,15 +32,15 @@ error_reporting(1);
         ?>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Afficher détails<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="profil.html">Profil</a></li>
-                        <li><a href="détails de réservation.html">Détails de réservation</a></li>
+                        <li><a href="profil.php">Profil</a></li>
+                        <li><a href="détails de réservation.php">Détails de réservation</a></li>
                         <li><a href="se déconnecter.php">Se déconnecter</a></li>
                     </ul>
                 </li>
                 <?php } else
 		{
 		?>
-                <li><a href="identifier.html" title="login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Connexion Utilisateur</a>
+                <li><a href="identifier.php" title="login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Connexion Utilisateur</a>
                 </li>
                 <?php 
 		} ?>

@@ -13,12 +13,12 @@ include('connection.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
 </head>
-<div w3-include-html="barre de menu.html"></div>
-
+<?php
+      include('barre de menu.php')
+  ?>
 <body style="margin-top:50px;">
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -107,10 +107,7 @@ include('connection.php');
         </div>
     </div>
 
-    <div w3-include-html="bas de page.html"></div>
-</body>
-<script>
-    w3.includeHTML();
-</script>
-
+    <?php
+  include('bas de page.php')
+?>
 </html>

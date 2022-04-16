@@ -26,38 +26,39 @@ if(isset($submit))
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
     <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body style="margin-top:50px;">
-    <?php
-include('barre de menu.html')
-?>
-        <div class="container-fluid" id="primary">
-            <!-- Primary Id-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-6">
-                        <h1 style="margin-top:50px;padding-top:50px;">Compte oublié</h1>
+<?php
+      include('barre de menu.php')
+  ?>
+    <div class="container-fluid" id="primary">
+        <!-- Primary Id-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h1 style="margin-top:50px;padding-top:50px;">Compte oublié</h1>
+                    <hr>
+                    <?php echo  @$error; ?>
+                    <p class="text-center">Veuillez saisir votre email ou votre numéro de téléphone pour trouver votre compte.</p><br><br>
+                    <form method="post">
+                        <div class="form-group">
+                            <input type="Email" name="email" class="form-control" id="#" placeholder="Email ou numéro de téléphone" required>
+                        </div>
                         <hr>
-                        <?php echo  @$error; ?>
-                        <p class="text-center">Veuillez saisir votre email ou votre numéro de téléphone pour trouver votre compte.</p><br><br>
-                        <form method="post">
-                            <div class="form-group">
-                                <input type="Email" name="email" class="form-control" id="#" placeholder="Email ou numéro de téléphone" required>
-                            </div>
-                            <hr>
-                            <input type="submit" value="submit" name="submit" class="btn btn-primary btn-group-justified" required>
-                        </form><br><br><br><br>
-                    </div>
+                        <input type="submit" value="submit" name="submit" class="btn btn-primary btn-group-justified" required>
+                    </form><br><br><br><br>
                 </div>
             </div>
         </div>
+    </div>
 
-        <?php
-include('bas de page.html')
+    <?php
+  include('bas de page.php')
 ?>
 </body>
 
