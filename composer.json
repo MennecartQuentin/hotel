@@ -3,3 +3,6 @@
         "php": "~8"
     }
 }
+"compile": [
+    "php bin/console doctrine:migration:migrate"
+]
