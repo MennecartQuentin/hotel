@@ -8,10 +8,10 @@
 
 
 //Remote Database Connection
-$host = 'remotemysql.com';
-$db = '0Ly3QV748r';
-$user = '0Ly3QV748r';
-$pass = 'uzHo5IjHkU';
+$host = 'z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	';
+$db = 'ar662gh4xatv6jij';
+$user = 'j8dyeol6835wgt08';
+$pass = 'gpef3h97wkwhj5zg';
 $charset = 'utf8mb4';
 
 $con=mysqli_connect("host=$host;dbname=$db;charset=$charset")or die('La connexion à la base de données a échoué');
