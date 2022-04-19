@@ -1,8 +1,8 @@
 {
     "require": {
         "php": "~8"
-    }
+    },
+    "compile": [
+        "php bin/console doctrine:migration:migrate"
+    ]
 }
-"compile": [
-    "php bin/console doctrine:migration:migrate"
-]
