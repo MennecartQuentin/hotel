@@ -1,0 +1,9 @@
+{
+    "name": "hotel/hypnos",
+    "description": "Yet Another System of Template, but in PHP",
+    "license": "Apache License",
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~8"
+    }
+}
