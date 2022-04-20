@@ -27,7 +27,7 @@ $msg= "<h4 style='color:green;'>commentaires envoyés avec succès</h4>";
 
         <div class="col-sm-4 text-center">
             <div class="panel panel-primary">
-                <div class="panel-heading">Commentaires</div>
+                <div class="panel-heading">Contact</div>
                 <div class="panel-body">
                     <?php echo @$msg; ?>
                     <div class="feedback">

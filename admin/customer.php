@@ -8,7 +8,7 @@
 		<th>Adresse</th>
 		<th>État</th>
 		<th>Zip</th>
-		<th>Contry</th>
+		<th>Country</th>
 		<th>Type de la chambre</th>
 		<th>Vérifier la date d'entrée</th>
 		<th>Verifier le temps de sortie</th>
@@ -31,7 +31,7 @@ while($res=mysqli_fetch_assoc($sql))
 		<td><?php echo $res['address']; ?></td>
 		<td><?php echo $res['state']; ?></td>
 		<td><?php echo $res['zip']; ?></td>
-		<td><?php echo $res['contry']; ?></td>
+		<td><?php echo $res['country']; ?></td>
 		<td><?php echo $res['room_type']; ?></td>
 		<td><?php echo $res['check_in_date']; ?></td>
 		<td><?php echo $res['check_in_time']; ?></td>
