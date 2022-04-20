@@ -5,5 +5,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": "~8"
-    }
+    },
+    "compile": [
+        "php bin/console doctrine:migartions:migrate"
+    ]
 }
