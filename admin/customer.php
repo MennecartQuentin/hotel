@@ -8,7 +8,7 @@
 		<th>Adresse</th>
 		<th>État</th>
 		<th>Zip</th>
-		<th>Contry</th>
+		<th>Country</th>
 		<th>Type de la chambre</th>
 		<th>Vérifier la date d'entrée</th>
 		<th>Verifier le temps de sortie</th>
