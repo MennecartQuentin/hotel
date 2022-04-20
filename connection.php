@@ -8,7 +8,7 @@
 
 
 //Remote Database Connection
-$host = 'z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	';
+$host = 'z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
 $db = 'ar662gh4xatv6jij';
 $user = 'j8dyeol6835wgt08';
 $pass = 'gpef3h97wkwhj5zg';
