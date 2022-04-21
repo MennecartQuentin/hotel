@@ -4,7 +4,7 @@ extract($_REQUEST);
 if(isset($send))
 {
 mysqli_query($con,"insert into feedback values('','$n','$pr',$e','$opt','$msg')");	
-$msg= "<h4 style='color:green;'>commentaires envoyés avec succès</h4>";
+$msg= "<h4 style='color:green;'>message envoyé avec succès</h4>";
 }
 ?>
 <footer style="background-color: #393939;">
