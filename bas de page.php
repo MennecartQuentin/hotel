@@ -40,16 +40,14 @@ $msg= "<h4 style='color:green;'>message envoyé avec succès</h4>";
                             </div>
                             <div class="form-group">
                                 <input type="Email" name="e" class="form-control" id="#" placeholder="Entrer votre email" required>
-                            </div>
-                            
+                            </div> 
                             <div class="form-group">
-                            <select name="liste" id="#">
-                                <input type="option" name="opt" class="form-control" id="#" placeholder="Choisir une option" required>
                                 
+                                <select name="liste" id="#" placeholder="Choisir une option">
                                 <option value="critère1">Je souhaite poser une réclamation</option>
                                 <option value="critère2">Je souhaite commander un service supplémentaire</option>
                                 <option value="critère3">Je souhaite en savoir plus sur une suite</option>
-                                <option value="critère3">J’ai un souci avec cette application</option>
+                                <option value="critère4">J’ai un souci avec cette application</option>
                                 </select>
                             </div>
                             <div class="form-group">
