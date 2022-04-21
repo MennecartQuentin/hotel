@@ -23,9 +23,16 @@
             <div class="row content">
                 <div class="col-sm-12">
                     <h1 id="font">{ Hôtel Hypnos}</h1><br>
-                    <p class="text-justify">Informations générales à propos de l'application et ces avantages
+                    <p class="text-justify">Informations générales à propos de l'application et ces avantages.
+                    Hypnos est un groupe hôtelier fondé en 2004. Propriétaire de 7 établissements dans les quatre 
+coins de l’hexagone, chacun de ces hôtels s’avère être une destination idéale pour les couples 
+en quête d’un séjour romantique à deux.
+
                         <h1 align="center" id="font">[ Services ]</h1><br>
-                        <p class="text-justify">Informations sur les services de l'hôtel</p>
+                        <p class="text-justify">Informations sur les services de l'hôtel
+                        Chaque  suite  au  design  luxueux  inclut  des  services  hauts  de  gamme  (un  spa  privatif 
+notamment), de quoi plonger pleinement dans une atmosphère chic-romantique.
+                        </p>
                 </div>
             </div><br><br>
             <div class="row" align="center">

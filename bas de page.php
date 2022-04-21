@@ -3,7 +3,7 @@ include('connection.php');
 extract($_REQUEST);
 if(isset($send))
 {
-mysqli_query($con,"insert into feedback values('','$n','$e','$mob','$msg')");	
+mysqli_query($con,"insert into feedback values('','$n','$pr',$e','$opt','$msg')");	
 $msg= "<h4 style='color:green;'>commentaires envoyés avec succès</h4>";
 }
 ?>
@@ -36,10 +36,17 @@ $msg= "<h4 style='color:green;'>commentaires envoyés avec succès</h4>";
                                 <input type="text" name="n" class="form-control" id="#" placeholder="Entrer votre nom" required>
                             </div>
                             <div class="form-group">
+                                <input type="text" name="pr" class="form-control" id="#" placeholder="Entrer votre prénom" required>
+                            </div>
+                            <div class="form-group">
                                 <input type="Email" name="e" class="form-control" id="#" placeholder="Entrer votre email" required>
                             </div>
                             <div class="form-group">
-                                <input type="Number" name="mob" class="form-control" id="#" placeholder="Numéro de téléphone" required>
+                                <input type="option" name="opt" class="form-control" id="#" placeholder="Choisir une option" required>
+                                <option value="critère1">Je souhaite poser une réclamation</option>
+                                <option value="critère2">Je souhaite commander un service supplémentaire</option>
+                                <option value="critère3">Je souhaite en savoir plus sur une suite</option>
+                                <option value="critère3">J’ai un souci avec cette application</option>
                             </div>
                             <div class="form-group">
                                 <textarea type="Text" name="msg" class="form-control" id="#" placeholder="Tapez votre massage" required></textarea>
