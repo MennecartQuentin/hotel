@@ -52,7 +52,7 @@ h3 {
 /* Add a Room Info and Color Fill*/
 
 #red {
-    background-color: #849ca3;
+    background-color: #87ACA3;
 }
 
 
@@ -78,7 +78,7 @@ h3 {
 
 h5 {
     color: white;
-    background-color: #6d6e6a;
+    background-color: #2B7C85;
     height: 100px;
     width: 100%;
 }
@@ -139,9 +139,6 @@ h1 {
 .thumbnail a img:hover {
     box-shadow: 5px 5px 5px #000408;
 }
-
-
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 
 #font {
     font-family: 'Abril Fatface', cursive;
