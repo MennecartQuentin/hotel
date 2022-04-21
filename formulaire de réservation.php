@@ -1,9 +1,9 @@
 <?php 
-include('barre de menu.html');
+include('barre de menu.php');
 include('connection.php');
 if($eid=="")
 {
-header('location:identifier.html');
+header('location:identifier.php');
 }
 $sql= mysqli_query($con,"select * from create_account where email='$eid' "); 
 $result=mysqli_fetch_assoc($sql);

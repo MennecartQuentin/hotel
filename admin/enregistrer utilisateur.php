@@ -13,7 +13,7 @@
 	</tr>
 	<?php  
 $i=1;
-$con=mysqli_connect("localhost","root","","hotel") or die('La connexion à la base de données a échoué');
+$con=mysqli_connect("localhost","id18817619_hypnos_hotel","Qsm16051998*","id18817619_hotel") or die('La connexion à la base de données a échoué');
 $sql=mysqli_query($con,"select * from create_account");
 while($res=mysqli_fetch_assoc($sql))
 {
