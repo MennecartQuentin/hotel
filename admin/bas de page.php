@@ -43,8 +43,8 @@ $msg= "<h4 style='color:green;'>Message envoyé avec succès</h4>";
           <input type="Email" name="e" class="form-control" id="#"placeholder="Entrez votre email"required>
         </div>
         <div class="form-group">
-                                <input type="option" name="opt" class="form-control" id="#" placeholder="Choisir une option" required>
-                                <select name="liste" id="#">
+                            
+                                <select name="opt" id="#"placeholder="Choisir une option">
                                 <option value="critère1">Je souhaite poser une réclamation</option>
                                 <option value="critère2">Je souhaite commander un service supplémentaire</option>
                                 <option value="critère3">Je souhaite en savoir plus sur une suite</option>

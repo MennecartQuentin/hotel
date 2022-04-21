@@ -42,13 +42,14 @@ $msg= "<h4 style='color:green;'>message envoyé avec succès</h4>";
                                 <input type="Email" name="e" class="form-control" id="#" placeholder="Entrer votre email" required>
                             </div> 
                             <div class="form-group">
-                                
-                                <select name="liste" id="#" placeholder="Choisir une option">
+                            
+                                <select name="opt" id="#"placeholder="Choisir une option">
                                 <option value="critère1">Je souhaite poser une réclamation</option>
                                 <option value="critère2">Je souhaite commander un service supplémentaire</option>
                                 <option value="critère3">Je souhaite en savoir plus sur une suite</option>
                                 <option value="critère4">J’ai un souci avec cette application</option>
                                 </select>
+                                
                             </div>
                             <div class="form-group">
                                 <textarea type="Text" name="msg" class="form-control" id="#" placeholder="Tapez votre massage" required></textarea>
