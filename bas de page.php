@@ -43,10 +43,12 @@ $msg= "<h4 style='color:green;'>message envoyé avec succès</h4>";
                             </div>
                             <div class="form-group">
                                 <input type="option" name="opt" class="form-control" id="#" placeholder="Choisir une option" required>
+                                <select name="liste" id="#">
                                 <option value="critère1">Je souhaite poser une réclamation</option>
                                 <option value="critère2">Je souhaite commander un service supplémentaire</option>
                                 <option value="critère3">Je souhaite en savoir plus sur une suite</option>
                                 <option value="critère3">J’ai un souci avec cette application</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <textarea type="Text" name="msg" class="form-control" id="#" placeholder="Tapez votre massage" required></textarea>
