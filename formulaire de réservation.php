@@ -59,7 +59,7 @@ if(isset($savedata))
            <div class="row">
               <div class="control-label col-sm-4"><h4> Nom :</h4></div>
                 <div class="col-sm-8">
-                 <input type="text" value="<?php echo $result['name']; ?>" readonly="readonly" class="form-control" name="name"required>
+                 <input type="text" value="<?php echo $result['name']; ?>" class="form-control" name="name"required>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ if(isset($savedata))
           <div class="row">
            <div class="control-label col-sm-4"><h4>Email :</h4></div>
           <div class="col-sm-8">
-              <input type="email" value="<?php echo $result['email']; ?>" readonly="readonly" class="form-control" name="email"  placeholder="Entrer votre email" required>
+              <input type="email" value="<?php echo $result['email']; ?>"  class="form-control" name="email"  placeholder="Entrer votre email" required>
           </div>
         </div>
         </div>
@@ -77,16 +77,16 @@ if(isset($savedata))
           <div class="row">
            <div class="control-label col-sm-4"><h4>Téléphone :</h4></div>
           <div class="col-sm-8">
-              <input type="number" value="<?php echo $result['mobile']; ?>" readonly="readonly" class="form-control" name="phone" placeholder="Entrer votre numéro de téléphone"required>
+              <input type="number" value="<?php echo $result['mobile']; ?>"  class="form-control" name="phone" placeholder="Entrer votre numéro de téléphone"required>
           </div>
         </div>
         </div>
 
         <div class="form-group">
           <div class="row">
-           <div class="control-label col-sm-4"><h4>Addresse :</h4></div>
+           <div class="control-label col-sm-4"><h4>Adresse :</h4></div>
           <div class="col-sm-8">
-              <textarea name="address" class="form-control" readonly="readonly" placeholder="Entrer votre addresse"><?php echo $result['address'];  ?></textarea>
+              <textarea name="address" class="form-control"  placeholder="Entrer votre addresse"><?php echo $result['address'];  ?></textarea>
           </div>
         </div>
         </div>
@@ -95,7 +95,7 @@ if(isset($savedata))
           <div class="row">
            <div class="control-label col-sm-4"><h4>Pays</h4></div>
           <div class="col-sm-8">
-              <input type="text" class="form-control" readonly="readonly"  value="<?php echo $result['country']; ?>" name="city" placeholder="Entrer le nom de votre pays"required>
+              <input type="text" class="form-control"  value="<?php echo $result['country']; ?>" name="city" placeholder="Entrer le nom de votre pays"required>
           </div>
         </div>
         </div>
